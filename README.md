@@ -3,8 +3,8 @@
 Repositório de estudos práticos rumo a DevOps na AWS.
 Cada pasta numerada é um projeto que constrói em cima do anterior.
 
-**Ponto de partida:** AWS Certified Cloud Practitioner ✅
-**Próxima certificação:** AWS Solutions Architect Associate (SAA-C03)
+**Ponto de partida:** AWS Academy Cloud Foundations (curso concluído, conteúdo do Cloud Practitioner) ✅
+**Próxima certificação:** AWS Solutions Architect Associate (SAA): veja a [trilha de estudos](TRILHA-SAA.md)
 **Ritmo:** ~6h por semana
 
 ## Rotina semanal (6h)
@@ -22,7 +22,7 @@ Cada pasta numerada é um projeto que constrói em cima do anterior.
 | # | Projeto | O que você aprende | Estimativa | Status |
 |---|---------|--------------------|------------|--------|
 | 01 | [Setup seguro da conta](01-setup-conta/) | IAM, MFA, billing, AWS CLI | 1 semana | ✅ |
-| 02 | Site estático (S3 + CloudFront) | S3, CDN, HTTPS e depois o mesmo em Terraform | 2 semanas | 🔄 |
+| 02 | [Site estático (S3 + CloudFront)](02-site-estatico/) | S3, CDN, HTTPS e depois o mesmo em Terraform | 2 semanas | 🔄 |
 | 03 | Docker de verdade | Imagem, camadas, volumes, redes, multi-stage, compose | 2 semanas | ⏳ |
 | 04 | VPC do zero em Terraform | Subnets, rotas, NAT, security groups, SSM | 3 semanas | ⏳ |
 | 05 | App no ECS Fargate + ALB | ECR, ECS, Load Balancer, deploy de container | 3 semanas | ⏳ |
