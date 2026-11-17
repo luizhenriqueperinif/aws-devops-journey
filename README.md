@@ -21,8 +21,8 @@ Cada pasta numerada é um projeto que constrói em cima do anterior.
 
 | # | Projeto | O que você aprende | Estimativa | Status |
 |---|---------|--------------------|------------|--------|
-| 01 | [Setup seguro da conta](01-setup-conta/) | IAM, MFA, billing, AWS CLI | 1 semana | 🔄 |
-| 02 | Site estático (S3 + CloudFront) | S3, CDN, HTTPS e depois o mesmo em Terraform | 2 semanas | ⏳ |
+| 01 | [Setup seguro da conta](01-setup-conta/) | IAM, MFA, billing, AWS CLI | 1 semana | ✅ |
+| 02 | Site estático (S3 + CloudFront) | S3, CDN, HTTPS e depois o mesmo em Terraform | 2 semanas | 🔄 |
 | 03 | Docker de verdade | Imagem, camadas, volumes, redes, multi-stage, compose | 2 semanas | ⏳ |
 | 04 | VPC do zero em Terraform | Subnets, rotas, NAT, security groups, SSM | 3 semanas | ⏳ |
 | 05 | App no ECS Fargate + ALB | ECR, ECS, Load Balancer, deploy de container | 3 semanas | ⏳ |
