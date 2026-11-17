@@ -1,0 +1,24 @@
+# --- Terraform ---
+# Plugins/providers baixados (pesados, recriados com terraform init)
+.terraform/
+# State: guarda IDs, IPs e às vezes SENHAS da sua infra em texto puro
+*.tfstate
+*.tfstate.*
+# Variáveis com valores reais (ex.: account id, segredos)
+*.tfvars
+!*.tfvars.example
+crash.log
+override.tf
+override.tf.json
+
+# --- Credenciais / segredos ---
+.env
+.env.*
+*.pem
+*.key
+.aws/
+
+# --- Sistema / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
