@@ -23,36 +23,36 @@ dele, via **OAC (Origin Access Control)**. Isso cai na prova da SAA.
 ## Parte A: Pelo console (sessões 1 e 2)
 
 ### A1. O site
-- [ ] Criar a pasta `02-site-estatico/site/`
-- [ ] Criar um `index.html` simples, feito por você (sugestão: uma página "Sobre mim" com sua jornada AWS)
-- [ ] Criar um `error.html` (página de erro 404)
+- [x] Criar a pasta `02-site-estatico/site/`
+- [x] Criar um `index.html` simples, feito por você (sugestão: uma página "Sobre mim" com sua jornada AWS)
+- [x] Criar um `error.html` (página de erro 404)
 
 ### A2. Bucket S3
-- [ ] Criar um bucket em `us-east-1` com nome único (ex.: `site-estudos-<algo-seu>`)
-- [ ] **Block all public access: LIGADO** (deixe o padrão)
-- [ ] Enviar os arquivos **pela CLI**:
+- [x] Criar um bucket em `us-east-1` com nome único (ex.: `site-estudos-<algo-seu>`)
+- [x] **Block all public access: LIGADO** (deixe o padrão)
+- [x] Enviar os arquivos **pela CLI**:
   ```powershell
   aws s3 sync .\site s3://NOME-DO-BUCKET --profile estudos
   aws s3 ls s3://NOME-DO-BUCKET --profile estudos
   ```
-- [ ] Tentar abrir a URL do objeto no navegador: deve dar **Access Denied** (isso é bom!)
+- [x] Tentar abrir a URL do objeto no navegador: deve dar **Access Denied** (isso é bom!)
 
 ### A3. Distribuição CloudFront
-- [ ] Criar distribuição com origem = seu bucket S3
-- [ ] Origin access: **Origin access control settings (recommended)** e criar um OAC
-- [ ] Viewer protocol policy: **Redirect HTTP to HTTPS**
-- [ ] Default root object: `index.html`
-- [ ] Se o console perguntar sobre **plano de preço** do CloudFront, me chame antes de escolher
-- [ ] Copiar a **bucket policy** que o CloudFront sugere e colar em S3 → bucket → Permissions
-- [ ] Aguardar o deploy (alguns minutos) e abrir `https://dXXXX.cloudfront.net` 🎉
+- [x] Criar distribuição com origem = seu bucket S3
+- [x] Origin access: **Origin access control settings (recommended)** e criar um OAC
+- [x] Viewer protocol policy: **Redirect HTTP to HTTPS**
+- [x] Default root object: `index.html`
+- [x] Se o console perguntar sobre **plano de preço** do CloudFront, me chame antes de escolher
+- [x] Copiar a **bucket policy** que o CloudFront sugere e colar em S3 → bucket → Permissions
+- [x] Aguardar o deploy (alguns minutos) e abrir `https://dXXXX.cloudfront.net` 🎉
 
 ### A4. Cache na prática
-- [ ] Alterar o `index.html`, rodar o `aws s3 sync` de novo e recarregar o site: **mudou?**
-- [ ] Criar uma **invalidação** e testar de novo:
+- [x] Alterar o `index.html`, rodar o `aws s3 sync` de novo e recarregar o site: **mudou?**
+- [x] Criar uma **invalidação** e testar de novo:
   ```powershell
   aws cloudfront create-invalidation --distribution-id ID --paths "/*" --profile estudos
   ```
-- [ ] Anotar no diário por que não mudou na primeira vez
+- [x] Anotar no diário por que não mudou na primeira vez
 
 ### A5. Destruir tudo
 - [ ] CloudFront: **Disable** a distribuição, esperar, depois **Delete**
